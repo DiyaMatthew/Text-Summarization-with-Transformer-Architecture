@@ -15,6 +15,13 @@ An end-to-end **abstractive & extractive text summarization system** built using
 This project investigates how different transformer architectures perform across **multiple real-world text scenarios** such as news articles, emails, reviews, and reports.
 
 ---
+Demo Screenshots
+
+<img width="760" height="414" alt="Screenshot 2026-05-05 at 10 44 27" src="https://github.com/user-attachments/assets/258453f2-347d-4e17-8c1a-11470558eb6d" />
+
+
+
+---
 
 ## 🎯 Key Highlights
 
