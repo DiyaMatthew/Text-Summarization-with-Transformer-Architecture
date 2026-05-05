@@ -35,3 +35,104 @@ This project builds an **automated summarization system** that generates concise
 ---
 
 ## ⚙️ System Architecture
+
+Raw Text → Cleaning → Tokenization → Transformer Model → Generated Summary → Evaluation (ROUGE)
+
+---
+
+### Components:
+- Data preprocessing (NLTK)
+- Tokenization (model-specific)
+- Fine-tuning transformer models
+- Evaluation & comparison
+- Deployment (Streamlit)
+
+---
+
+## 📊 Models Implemented
+
+### 🔹 Abstractive Models
+- T5 (Text-to-Text Transformer)
+- BART (Denoising Seq2Seq Transformer)
+- PEGASUS (Summarization-optimized Transformer)
+
+### 🔹 Extractive Models
+- BERT  
+- RoBERTa  
+
+---
+
+## 📈 Results (ROUGE Scores)
+
+### Abstractive Models
+
+| Model | ROUGE-1 | ROUGE-2 | ROUGE-L | ROUGE-Lsum |
+|------|--------|--------|--------|-----------|
+| T5 | 27.44 | 13.40 | 23.07 | 26.37 |
+| BART | 42.16 | 20.62 | 31.08 | 40.11 |
+| PEGASUS | **42.56** | **21.56** | **32.42** | **40.70** |
+
+👉 Although PEGASUS achieved the highest scores, **BART produced more human-like summaries in real-world scenarios**
+
+---
+
+### Extractive Models
+
+| Model | Precision | Recall | F1 |
+|------|----------|--------|----|
+| BERT | 0.0053 | 0.0201 | 0.0083 |
+| RoBERTa | **0.187** | **0.0332** | **0.0538** |
+
+---
+
+## 🧪 Real-World Use Case Testing
+
+The system was tested across diverse domains:
+
+- News Articles → High-quality summaries  
+- Emails → Extracted key actions & dates  
+- Product Reviews → Captured sentiment & key points  
+- Research Papers → Extracted core contributions  
+- Meeting Reports → Summarized decisions  
+
+### Limitations:
+- Poor performance on:
+  - Poems  
+  - Conversations  
+  - Medical reports (due to domain mismatch)
+
+---
+
+## 🧪 Example
+
+**Input:**  
+Long news article text...
+
+**Output (BART):**  
+Concise, human-like summary capturing key information
+
+---
+
+## ⚙️ Training Details
+
+- Dataset: CNN/DailyMail (300K samples)  
+- Framework: PyTorch  
+- Library: Hugging Face Transformers  
+- Environment: Google Colab (GPU: T4/P100)  
+- Hyperparameter tuning: Optuna  
+
+### Key Hyperparameters:
+- Learning rate: 3e-4 → 1e-2  
+- Epochs: 1–6  
+- Batch size: 4–8  
+
+---
+
+## 🚀 Deployment
+
+A working web application was built using Streamlit.
+
+### Run locally:
+
+```bash
+streamlit run app.py
