@@ -1,4 +1,4 @@
-# Text-Summarization-with-Transformer-Architecture
+# Text-Summarization-with-Transformer-Architecture : Research and Model selection
 This project makes an investigation into Deep Learning based Text summarization using Transformer Architecture. 
 
 
